@@ -1,7 +1,6 @@
 ----1
-
-SELECT DISTINCT `users`.`username`, `users`.`email`, `users`.`created_at`, `medias`.`type`, `medias`.`created_at`
-FROM `users`
+SELECT DISTINCT `users`.`username`,`users`.`email`, `users`.`created_at`, `medias`.`type`, `medias`.`created_at`
+FROM users
 INNER JOIN `medias`
-ON `users`.`id` = `medias`.`id` 
-WHERE `medias`.`type` = "video" ;
+ ON `users`.`id` = `medias`.`user_id`
+WHERE `medias`.`type` = 'video';
