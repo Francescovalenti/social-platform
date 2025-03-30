@@ -1,6 +1,14 @@
 ----1
-SELECT DISTINCT `users`.`username`,`users`.`email`, `users`.`created_at`, `medias`.`type`, `medias`.`created_at`
+SELECT DISTINCT `users`.`username`,`users`.`email`, `users`.`created_at`, `medias`.`type`
 FROM users
 INNER JOIN `medias`
  ON `users`.`id` = `medias`.`user_id`
 WHERE `medias`.`type` = 'video';
+
+---2
+
+SELECT `posts`.`id`,`posts`.`user_id`,`posts`.`title`,`posts`.`date`,`posts`.`tags`,`posts`.`created_at`
+FROM `posts`
+LEFT JOIN `likes`
+ON `posts`.`id` = `likes`.`post_id`
+WHERE `likes`.`post_id` IS NULL;
