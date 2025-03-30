@@ -31,7 +31,7 @@ ORDER BY `numero_like`;
 
 ----4
 
-SELECT DISTINCT	 `users`.`username`, `users`.`created_at`, COUNT(`medias`.`id`) AS`number_media`
+SELECT 	`users`.`username`, `users`.`created_at`, COUNT(`medias`.`id`) AS`number_media`
 FROM `users`
 INNER JOIN `medias`
 ON `users`.`id`=`medias`.`user_id`
