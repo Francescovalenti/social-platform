@@ -1,5 +1,5 @@
 ----1
-SELECT DISTINCT `users`.`username`,`users`.`email`, `users`.`created_at`, `medias`.`type`
+SELECT `users`.`username`,`users`.`email`, `users`.`created_at`, `medias`.`type`
 FROM users
 INNER JOIN `medias`
  ON `users`.`id` = `medias`.`user_id`
