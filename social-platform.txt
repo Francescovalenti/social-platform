@@ -19,7 +19,7 @@ SELECT `posts`.`id`,  `posts`.`title` ,COUNT(likes.post_id)AS `numero_like`
 FROM `posts`
 LEFT JOIN `likes`
 ON `posts`.`id`= `likes`.`post_id`
-GROUP BY `posts`.`id`,`posts`.`title`
+GROUP BY `posts`.`id`
 ORDER BY `numero_like`;
 
 solo SELECT
@@ -36,7 +36,7 @@ FROM `users`
 INNER JOIN `medias`
 ON `users`.`id`=`medias`.`user_id`
 WHERE `medias`.`created_at` 
-GROUP BY `users`.`id`, `users`.`username`, `users`.`created_at` 
+GROUP BY `users`.`id`
 ORDER BY `number_media`
 
 
