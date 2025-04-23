@@ -48,5 +48,5 @@ INNER JOIN `posts`
 ON `users`.`id`= `posts`.`user_id`
 INNER JOIN `likes`
 ON `posts`.`id` = `likes`.`post_id`
-GROUP BY `users`.`id`, `users`.`username`
+GROUP BY `users`.`id`
 ORDER BY `likes_ricevuti`;
